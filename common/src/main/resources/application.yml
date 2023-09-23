@@ -1,0 +1,22 @@
+server.port: 9000
+spring:
+  jmx.enabled: false
+  profiles:
+    active: @profiles.active@
+    include: log
+  messages:
+    encoding: UTF-8
+    basename: message/messages
+  servlet.multipart:
+    enabled: true
+    file-size-threshold: 0
+    max-file-size: 1000MB
+    max-request-size: 1000MB
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/bridge?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: 123
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  mapper-locations: classpath:org/bridge/common/mapper/xml/*.xml
+  config-location: classpath:mybatis.xml

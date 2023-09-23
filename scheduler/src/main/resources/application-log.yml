@@ -1,0 +1,6 @@
+#
+logging:
+  level.org:
+    chain.*: info
+    bridge.*: info
+  file: /data/test.log
